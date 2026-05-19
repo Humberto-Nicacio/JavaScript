@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Verificação de País</title>
+</head>
+<body>
+      <h1>Sistema do IBGE</h1>
+      País onde reside: <input type="pais" id ="pais">
+      <input type="button" value="Verificar" onclick="verificar()">
+      <div id="res"></div>
+      <script>
+            function verificar() {
+                  var lugar = document.querySelector('input#pais').value
+                  var res = document.querySelector('div#res')
+                  res.innerHTML = `<p>Você reside em <strong>${lugar}</strong></p>`
+                  if (lugar == 'Brasil' || lugar == 'brasil') {
+                        res.innerHTML += `<p>Então você é <strong>Brasileiro</strong>.</p>`
+                  } else {
+                        res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>.</p>`
+                  }
+            }
+      </script>
+</body>
+</html>
